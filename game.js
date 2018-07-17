@@ -162,7 +162,7 @@ Game.loadResources = function () {
                         if (node instanceof THREE.Mesh) {
                             node.castShadow = true;
                             node.receiveShadow = true;
-                            node.material.color.setHex(0xE74C3C);
+                            node.material.color.setHex(0xFFFFFF);
                         }
                     });
                     Game.ball = mesh;
@@ -405,7 +405,7 @@ Game.findCollision = function () {
 
             if (xPoint < 0.6 && xPoint > -0.55 && yPoint <= 2 && yPoint >= -0.2 && zPoint < -1.8 && zPoint > -2.4) {
                 //console.log("x ", xPoint, "y ", yPoint, "z ", zPoint);
-                if (_cubeBox.type === this.RED_PIECE) {
+                if (_cubeBox.platformType === this.RED_PIECE) {
                     this.gameOver = true;
                     this.scoreBoard.innerHTML = "GAME OVER";
                     this.changeBallColor();
